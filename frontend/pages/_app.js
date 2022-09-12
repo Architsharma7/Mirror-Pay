@@ -1,5 +1,6 @@
 import '../styles/globals.css'
 
+//rainbow imports
 import '@rainbow-me/rainbowkit/styles.css';
 import {
   getDefaultWallets,
@@ -15,6 +16,7 @@ import { alchemyProvider } from 'wagmi/providers/alchemy';
 import { publicProvider } from 'wagmi/providers/public';
 import { darkTheme } from '@rainbow-me/rainbowkit';
 
+// rainbow kit chains 
 const { chains, provider } = configureChains(
   [chain.mainnet, chain.polygon, chain.optimism, chain.arbitrum],
   [
@@ -33,6 +35,8 @@ const wagmiClient = createClient({
   connectors,
   provider
 })
+
+// rainbow kit setup finished
 
 function MyApp({ Component, pageProps }) {
   return (
