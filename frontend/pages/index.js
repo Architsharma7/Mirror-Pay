@@ -1,26 +1,11 @@
-import { ConnectButton } from "@rainbow-me/rainbowkit";
+import Navigate from "./components/Navigation";
+import Homepage from "./components/home";
 
 export default function Home() {
   return (
-    <div
-      style={{
-        alignItems: "center",
-        justifyContent: "center",
-        display: "flex",
-        width: "100vw",
-        height: "100vh",
-      }}
-    >
-      <ConnectButton
-        accountStatus={{
-          smallScreen: "avatar",
-          largeScreen: "full",
-        }}
-        showBalance={{
-          smallScreen: false,
-          largeScreen: true,
-        }}
-      />
-    </div>
-  );
+    <>
+    <Navigate/>
+    <Homepage/>
+    </>
+  )
 }
