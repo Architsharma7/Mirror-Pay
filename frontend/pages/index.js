@@ -1,11 +1,13 @@
-import Navigate from "./components/Navigation";
-import Homepage from "./components/home";
+import Homepage from "../components/home";
+import Navigate from "../components/Navigation";
+import About from "../components/about";
+
 
 export default function Home() {
   return (
-    <>
-    <Navigate/>
-    <Homepage/>
-    </>
-  )
+    <div>
+      <Navigate/>
+      <Homepage/>
+    </div>
+  );
 }

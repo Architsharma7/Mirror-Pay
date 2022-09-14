@@ -5,6 +5,9 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    maxWidth: {
+      '1/2': '50%',
+    },
     extend: {
       'animation': {
         'text':'text 5s ease infinite',
@@ -25,7 +28,8 @@ module.exports = {
     fontFamily: {
       signature: ['Great Vibes'],
       gfont: ['Press Start 2P'],
-      tfont: ['Monoton']
+      tfont: ['Monoton'],
+      yofont: ['Plaster'],
     }
   },
   plugins: [],
