@@ -78,7 +78,7 @@ export default function Homepage() {
   });
 
   return (
-    <div>
+    <div className="relative">
       <div className="flex flex-wrap w-full">
         <div className="pt-16 mt-28 mx-20 w-4/5">
           <motion.div
@@ -103,11 +103,11 @@ export default function Homepage() {
             </p>
           </motion.div>
           <br />
-          <div class="flex items-start justify-start py-6 mx-28">
-            <div class="relative group">
-              <div class="absolute -inset-0.5 bg-gradient-to-r from-pink-600 to-purple-600 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
-              <button class="relative px-7 py-4 bg-black rounded-lg leading-none flex items-center divide-x divide-gray-600">
-                <span class="pl-3 text-indigo-400 group-hover:text-gray-100 transition duration-200">
+          <div className="flex items-start justify-start py-6 mx-28">
+            <div className="relative group">
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-pink-600 to-purple-600 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
+              <button className="relative px-7 py-4 bg-black rounded-lg leading-none flex items-center divide-x divide-gray-600">
+                <span className="pl-3 text-indigo-400 group-hover:text-gray-100 transition duration-200">
                   Get Started &rarr;
                 </span>
               </button>
@@ -154,55 +154,142 @@ export default function Homepage() {
       <div className="flex justify-center pt-16 items-center">
         <p className="text-white text-4xl font-extrabold tracking-wide uppercase">
           What is{" "}
-          <span className="underline decoration-blue-500">Different?</span>
+          <span className="underline decoration-blue-500">Different ?</span>
         </p>
       </div>
       <br />
       <div className="flex flex-wrap flex-row pt-20 items-stretch mx-24">
         <div className="md:basis-1/2 float-right flex-auto">
           <div className="">
-            <img src=" " alt="" />
+            <img
+              src="../images/Security.png"
+              alt="security.png"
+              className="object-contain w-full h-80"
+            />
           </div>
         </div>
         <div className="md:basis-1/2 float-left flex-auto">
           <div className="flex md:justify-start justify-center">
-        <p
-          className="text-white text-4xl font-extrabold tracking-wide uppercase bg-gradient-to-r bg-clip-text  text-transparent 
+            <p
+              className="text-white text-4xl font-extrabold tracking-wide uppercase bg-gradient-to-r bg-clip-text  text-transparent 
             from-green-500  to-blue-600
             animate-text"
-        >
-          More Security
-        </p>
-        </div>
-        <br/>
-        <p className="text-white text-xl tracking-wide pt-4 m-auto">
-          In contrast to centralized solutions, decentralized systems ensure private data remains immutable and secure and is only able to be shared when outlined users consent to provide information. 
-        </p>
+            >
+              Better Security
+            </p>
+          </div>
+          <br />
+          <p className="text-white text-xl tracking-wide pt-4 m-auto">
+            In contrast to centralized solutions, decentralized systems ensure
+            private data remains immutable and secure and is only able to be
+            shared when outlined users consent to provide information.
+          </p>
         </div>
       </div>
-      <br/>
-      <div className="flex flex-wrap flex-row pt-40 items-stretch mx-24">
+      <br />
+      <div className="flex flex-wrap flex-row pt-32 items-stretch mx-24">
         <div className="md:basis-1/2 float-left flex-auto mx-auto">
           <div className="flex md:justify-start justify-center">
-        <p
-          className="text-white text-4xl font-extrabold tracking-wide uppercase bg-gradient-to-r bg-clip-text  text-transparent 
+            <p
+              className="text-white text-4xl font-extrabold tracking-wide uppercase bg-gradient-to-r bg-clip-text  text-transparent 
             from-yellow-500  to-red-300
             animate-text"
-        >
-          More Transparency
-        </p>
+            >
+              More Transparency
+            </p>
+          </div>
+          <br />
+          <p className="text-white text-xl tracking-wide pt-4 mx-auto md:mr-6">
+            We are a decentralized system, which by definition means, an
+            immutable distributed ledger that allows everyone to view every
+            single transaction. So no more hiding!!
+          </p>
         </div>
-        <br/>
-        <p className="text-white text-xl tracking-wide pt-4 mx-auto md:mr-6">
-          We are a decentralized system, which by definition means, an immutable distributed ledger that allows everyone to view every single transaction.
-          So no more hiding!!
-        </p>
-        </div>
-        <div className="md:basis-1/2 float-right flex-auto">
+        <div className="md:basis-1/2 float-right flex-auto justify-center">
           <div className="">
-            <img src=" " alt="" />
+            <img
+              src="../images/Question-mark.png"
+              alt="question-mark"
+              className="w-2/3 h-80"
+            />
           </div>
         </div>
+      </div>
+      <br />
+      <div className="flex flex-wrap flex-row pt-40 items-stretch mx-24">
+        <div className="md:basis-1/2 float-right flex-auto">
+          <div className="">
+            <img
+              src="../images/Payroll.png"
+              alt="payroll"
+              className="w-full h-80"
+            />
+          </div>
+        </div>
+        <div className="md:basis-1/2 float-left flex-auto">
+          <div className="flex md:justify-start justify-center">
+            <p
+              className="text-white text-4xl font-extrabold tracking-wide uppercase bg-gradient-to-r bg-clip-text  text-transparent 
+            from-white via-pink-300 to-blue-400
+            animate-text"
+            >
+              Manage Payroll
+            </p>
+          </div>
+          <br />
+          <p className="text-white text-xl tracking-wide pt-4 m-auto">
+            Reduce admin tasks by your in-house team. Work with Remote to manage
+            payroll across multiple countries where you have local entities,
+            without in-house administration.
+          </p>
+        </div>
+      </div>
+      <br />
+      <div className="pt-20">
+        <footer class="p-4 bg-gray-900 rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800">
+          <span class="text-sm text-white sm:text-center dark:text-gray-400">
+            © 2022{" "}
+            <a href="" class="">
+              MirrorPay™
+            </a>
+            . All Rights Reserved.
+          </span>
+          <span className="text-sm text-white dark:text-gray-400">
+            Built with 💜 by<span className="mr-3">:</span>
+            <a href="" className="mr-3 text-white">
+              Adam
+            </a>{" "}
+            <a href="https://twitter.com/Arcsh7" className="mr-3 text-white">
+              Archit
+            </a>{" "}
+            <a href="" className="text-white">Chiaki</a>
+          </span>
+          <ul class="flex flex-wrap items-center mt-3 text-lg text-white dark:text-gray-400 sm:mt-0">
+            <li>
+              <a
+                href="https://github.com/Architsharma7/Mirror-Pay"
+                class="mr-4 hover:text-blue-500 md:mr-6 text-white"
+              >
+                Github
+              </a>
+            </li>
+            <li>
+              <a href="#" class="mr-4 hover:text-blue-500 md:mr-6 text-white">
+                Privacy Policy
+              </a>
+            </li>
+            <li>
+              <a href="#" class="mr-4 hover:text-blue-500 md:mr-6 text-white">
+                Licensing
+              </a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-blue-500 text-white">
+                Contact
+              </a>
+            </li>
+          </ul>
+        </footer>
       </div>
     </div>
   );
