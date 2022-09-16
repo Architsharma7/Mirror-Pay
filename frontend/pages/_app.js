@@ -1,5 +1,5 @@
 import '../styles/globals.css';
-
+import React, { useState } from "react";
 //rainbow imports
 import '@rainbow-me/rainbowkit/styles.css';
 import {
@@ -39,6 +39,7 @@ const wagmiClient = createClient({
 // rainbow kit setup finished
 
 function MyApp({ Component, pageProps }) {
+  const [loading , setLoading] = useState(false);
   return (
     <WagmiConfig client={wagmiClient}>
       <RainbowKitProvider chains={chains} theme={darkTheme()}>

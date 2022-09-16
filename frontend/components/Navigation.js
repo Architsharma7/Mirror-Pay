@@ -29,7 +29,7 @@ export default function Navigate() {
               aria-hidden="true"
               fill="currentColor"
               viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
+              Xmlns="http://www.w3.org/2000/svg"
             >
               <path
                 fillRule="evenodd"
@@ -58,13 +58,13 @@ export default function Navigate() {
             </li>
             <li>
               <a
-                href="../components/employee-dashboard"
+                href="/dashboard"
                 className="block py-2 pr-4 pl-3 md:text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-white md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 md:text-xl sm:text-base font-semibold relative before:content-[''] before:absolute before:block before:w-full before:h-[2px] 
               before:bottom-0 before:left-0 before:bg-white
               before:hover:scale-x-100 before:scale-x-0 before:origin-top-left
               before:transition before:ease-in-out before:duration-300"
               >
-                EMPLOYEE
+                COMPANY
               </a>
             </li>
             <li>

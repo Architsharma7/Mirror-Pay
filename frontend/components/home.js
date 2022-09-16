@@ -2,15 +2,9 @@ import { motion } from "framer-motion";
 import { useRef } from "react";
 import {
   useScroll,
-  useSpring,
-  useTransform,
-  useMotionValue,
-  useVelocity,
-  useAnimationFrame,
 } from "framer-motion";
-import { wrap } from "@motionone/utils";
-import "./homestyle.module.css";
 
+/*
 function ParallaxText({ children, baseVelocity = 100 }) {
   const baseX = useMotionValue(0);
   const { scrollY } = useScroll();
@@ -35,7 +29,7 @@ function ParallaxText({ children, baseVelocity = 100 }) {
     /**
      * This is what changes the direction of the scroll once we
      * switch scrolling directions.
-     */
+     
     if (velocityFactor.get() < 0) {
       directionFactor.current = -1;
     } else if (velocityFactor.get() > 0) {
@@ -55,7 +49,7 @@ function ParallaxText({ children, baseVelocity = 100 }) {
    * currently wrapped between -20 and -45% - this 25% is derived from the fact
    * we have four children (100% / 4). This would also want deriving from the
    * dynamically generated number of children.
-   */
+   
   return (
     <div className="">
       <motion.div
@@ -70,7 +64,7 @@ function ParallaxText({ children, baseVelocity = 100 }) {
     </div>
   );
 }
-
+*/
 export default function Homepage() {
   const carouselRef = useRef(null);
   const { scrollX } = useScroll({
@@ -80,12 +74,12 @@ export default function Homepage() {
   return (
     <div className="relative">
       <div className="flex flex-wrap w-full">
-        <div className="pt-16 mt-28 mx-20 w-4/5">
+        <div className="mt-60 flex flex-wrap w-4/5 float-left">
           <motion.div
             animate={{ x: 100 }}
             transition={{ type: "spring", stiffness: 20, delay: 0.7 }}
           >
-            <p className="text-white text-6xl font-bold uppercase max-w-1/2 font-gfont">
+            <p className="text-white text-6xl font-bold uppercase w-full font-gfont">
               Mirror Pay
             </p>
           </motion.div>
@@ -97,13 +91,13 @@ export default function Homepage() {
             animate={{ x: 100 }}
             transition={{ type: "spring", stiffness: 20, delay: 0.7 }}
           >
-            <p className="text-white text-3xl max-w-1/2">
+            <p className="text-white text-3xl max-w-1/2 mt-6">
               Mirror Pay is an open source, De-Fi platform that allows companies
               to pay workers internationally in crypto.{" "}
             </p>
           </motion.div>
           <br />
-          <div className="flex items-start justify-start py-6 mx-28">
+          <div className="flex items-start justify-start py-6 mx-28 mt-4">
             <div className="relative group">
               <div className="absolute -inset-0.5 bg-gradient-to-r from-pink-600 to-purple-600 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
               <button className="relative px-7 py-4 bg-black rounded-lg leading-none flex items-center divide-x divide-gray-600">
@@ -114,17 +108,16 @@ export default function Homepage() {
             </div>
           </div>
         </div>
-        <div>
-          <p className="text-white h-2 w-1/5 float-right py-16 my-28">hello</p>
+        <div className="mt-60 flex flex-wrap float-right">
+          {/* here goes the payroll animation */}
+
+          
+          {/* payroll animation ends */}
         </div>
       </div>
+      {/*add some animation*/}
       <br />
-      <div className="text-white tracking-tight font-bold font-yofont py-40 leading-3 m-0 whitespace-nowrap flex-nowrap">
-        <ParallaxText baseVelocity={-5}>More Security</ParallaxText>
-        <ParallaxText baseVelocity={5}>More Transparency</ParallaxText>
-      </div>
-      <br />
-      <div className="flex flex-wrap w-full">
+      <div className="flex flex-wrap w-full mt-48">
         <div className="w-1/2 float-left ml-20">
           <p className="text-white text-4xl font-extrabold tracking-wide uppercase">
             The{" "}
@@ -151,14 +144,14 @@ export default function Homepage() {
       </div>
       <br />
       <br />
-      <div className="flex justify-center pt-16 items-center">
+      <div className="flex justify-center mt-32 items-center">
         <p className="text-white text-4xl font-extrabold tracking-wide uppercase">
           What is{" "}
           <span className="underline decoration-blue-500">Different ?</span>
         </p>
       </div>
       <br />
-      <div className="flex flex-wrap flex-row pt-20 items-stretch mx-24">
+      <div className="flex flex-wrap flex-row mt-28 items-stretch mx-24">
         <div className="md:basis-1/2 float-right flex-auto">
           <div className="">
             <img
@@ -188,7 +181,7 @@ export default function Homepage() {
       </div>
       <br />
       <div className="flex flex-wrap flex-row pt-32 items-stretch mx-24">
-        <div className="md:basis-1/2 float-left flex-auto mx-auto">
+        <div className="md:basis-1/2 float-left flex-auto">
           <div className="flex md:justify-start justify-center">
             <p
               className="text-white text-4xl font-extrabold tracking-wide uppercase bg-gradient-to-r bg-clip-text  text-transparent 
@@ -245,52 +238,6 @@ export default function Homepage() {
         </div>
       </div>
       <br />
-      <div className="pt-20">
-        <footer class="p-4 bg-gray-900 rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800">
-          <span class="text-sm text-white sm:text-center dark:text-gray-400">
-            © 2022{" "}
-            <a href="" class="">
-              MirrorPay™
-            </a>
-            . All Rights Reserved.
-          </span>
-          <span className="text-sm text-white dark:text-gray-400">
-            Built with 💜 by<span className="mr-3">:</span>
-            <a href="" className="mr-3 text-white">
-              Adam
-            </a>{" "}
-            <a href="https://twitter.com/Arcsh7" className="mr-3 text-white">
-              Archit
-            </a>{" "}
-            <a href="" className="text-white">Chiaki</a>
-          </span>
-          <ul class="flex flex-wrap items-center mt-3 text-lg text-white dark:text-gray-400 sm:mt-0">
-            <li>
-              <a
-                href="https://github.com/Architsharma7/Mirror-Pay"
-                class="mr-4 hover:text-blue-500 md:mr-6 text-white"
-              >
-                Github
-              </a>
-            </li>
-            <li>
-              <a href="#" class="mr-4 hover:text-blue-500 md:mr-6 text-white">
-                Privacy Policy
-              </a>
-            </li>
-            <li>
-              <a href="#" class="mr-4 hover:text-blue-500 md:mr-6 text-white">
-                Licensing
-              </a>
-            </li>
-            <li>
-              <a href="#" class="hover:text-blue-500 text-white">
-                Contact
-              </a>
-            </li>
-          </ul>
-        </footer>
-      </div>
     </div>
   );
 }
