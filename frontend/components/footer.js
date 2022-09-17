@@ -1,10 +1,10 @@
 export default function Footer() {
   return (
     <div className="pt-20">
-      <footer class="p-4 bg-gray-900 rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800">
-        <span class="text-sm text-white sm:text-center dark:text-gray-400">
+      <footer className="p-4 bg-gray-900 rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800">
+        <span className="text-sm text-white sm:text-center dark:text-gray-400">
           © 2022{" "}
-          <a href="" class="">
+          <a href="" className="">
             MirrorPay™
           </a>
           . All Rights Reserved.
@@ -24,7 +24,7 @@ export default function Footer() {
             Chiaki
           </a>
         </span>
-        <ul class="flex flex-wrap items-center mt-3 text-lg text-white dark:text-gray-400 sm:mt-0">
+        <ul className="flex flex-wrap items-center mt-3 text-lg text-white dark:text-gray-400 sm:mt-0">
           <li>
             <a
               href="https://github.com/Architsharma7/Mirror-Pay"
