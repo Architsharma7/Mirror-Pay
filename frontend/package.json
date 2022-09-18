@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@rainbow-me/rainbowkit": "^0.5.1",
+    "alchemy-sdk": "^2.0.4",
     "ethers": "^5.7.0",
     "framer-motion": "^7.3.3",
     "next": "^12.3.0",
