@@ -10,11 +10,12 @@
   },
   "dependencies": {
     "@rainbow-me/rainbowkit": "^0.5.1",
+    "alchemy-sdk": "^2.0.4",
     "ethers": "^5.7.0",
     "framer-motion": "^7.3.3",
-    "next": "12.3.0",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "next": "^12.3.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "wagmi": "^0.6.5"
   },
   "devDependencies": {
