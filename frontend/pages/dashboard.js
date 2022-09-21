@@ -2,7 +2,7 @@ import Link from "next/link";
 import { useState } from "react";
 
 export default function Dashboard() {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   const Menus = [
     {title: "hello", src: "control"},
     {title: "goodmorning", src: "control"},
@@ -14,7 +14,7 @@ export default function Dashboard() {
   ]
 
   return (
-    <div className="flex bg-white">
+    <div className="flex bg-white justify-between flex-col">
       <div className={`${open ? "w-72" : "w-20"} duration-300 h-screen bg-black relative p-5 pt-8`}>
         <img
           src="../images/control.png"
@@ -28,9 +28,9 @@ export default function Dashboard() {
         </div>
         <ul className={`text-white pt-6`}>
          {Menus.map((menu, index) => (
-          <li key={index} className={`${menu.gap? "mt-9" : "mt-2"} ${index === 0 && "bg-slate-400"} text-sm flex items-center gap-x-4 cursor-pointer p-2 rounded-md hover:bg-slate-400`}>
+          <li key={index} className={`${menu.gap? "mt-9" : "mt-2"}  text-sm flex items-center gap-x-4 cursor-pointer p-2 rounded-md hover:bg-slate-400`}>
             <img src={`../images/${menu.src}.png`}/>
-            <span className={`${!open && "hidden"} origin-left duration-300`}>{menu.title}</span>
+            <span className={`${!open && "hidden"} origin-left duration-300`}><Link href={`./${menu.title}`}>{menu.title}</Link></span>
           </li>
          ))}
         </ul>
@@ -38,3 +38,6 @@ export default function Dashboard() {
     </div>
   );
 }
+
+
+//${index === 0 && "bg-slate-400"}
