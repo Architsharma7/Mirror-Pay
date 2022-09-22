@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { chainId, customHttpProvider } from "../next.config";
 import { Framework } from "@superfluid-finance/sdk-core";
+import { ethers } from "ethers";
 
 class SuperfluidHelper {
-
+    customHttpProvider = new ethers.providers.JsonRpcProvider(process.env.ALCHEMY_RPC_URL);
     generateId() {
         return Math.floor(Math.random() * 1000000000);
     }
