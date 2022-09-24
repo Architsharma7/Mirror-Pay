@@ -1,7 +1,9 @@
-import { ConnectButton } from "@rainbow-me/rainbowkit";
-import Link from "next/link";
+import { useRouter } from "next/router";
+import { useState } from "react";
 
 export default function Navigate() {
+  const router = useRouter();
+
   return (
     <nav className="bg-gradient-to-r from-gray-900 to-black px-2 sm:px-4 py-2.5 dark:bg-black fixed w-full z-20 top-0 left-0 border-b border-black dark:border-black">
       <div className="container flex flex-wrap justify-between items-center mx-auto">
@@ -15,7 +17,11 @@ export default function Navigate() {
           </span>
         </a>
         <div className="flex md:order-2">
-          <ConnectButton />
+          <button className="relative px-7 py-4 bg-black rounded-lg leading-none flex items-center divide-x divide-gray-600" onClick={() => router.push("../onboarding")}>
+            <span className="pl-3 text-indigo-400 group-hover:text-gray-100 transition duration-200  hover:text-white">
+              Get Started &rarr;
+            </span>
+          </button>
           <button
             data-collapse-toggle="navbar-sticky"
             type="button"
@@ -69,7 +75,7 @@ export default function Navigate() {
             </li>
             <li>
               <a
-                href="../profile"
+                href="/layout"
                 className="block py-2 pr-4 pl-3 md:text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-white md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 md:text-xl sm:text-base font-semibold relative before:content-[''] before:absolute before:block before:w-full before:h-[2px] 
               before:bottom-0 before:left-0 before:bg-white
               before:hover:scale-x-100 before:scale-x-0 before:origin-top-left

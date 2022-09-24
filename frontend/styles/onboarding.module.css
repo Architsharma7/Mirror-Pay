@@ -1,0 +1,67 @@
+.form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.formcontainer {
+  width: 400px;
+  height: 400px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+}
+
+.formcontainer .header {
+  flex: 20%;
+  display: grid;
+  place-items: center;
+  
+}
+
+.formcontainer .body {
+  flex: 60%;
+}
+
+.formcontainer .footer {
+  flex: 20%;
+  display: flex;
+  justify-content: center;
+}
+
+.formcontainer .footer button {
+  width: 100px;
+  height: 40px;
+  background-color:mediumpurple;
+  font-weight: bold;
+  color: white;
+  border: 0 none;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 10px 5px;
+  margin: 10px 5px;
+  margin: 5px;
+}
+
+.formcontainer .footer button:hover{
+    background-color: cornflowerblue;
+}
+
+.progressbar {
+    width: 400px;
+    height: 10px;
+    background-color: white;
+    margin-bottom: 50px;
+}
+  
+.progressbar div {
+    width: 33.3%;
+    height: 100%;
+    background-color: rgb(98, 0, 255);
+}

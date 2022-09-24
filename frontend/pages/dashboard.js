@@ -1,5 +1,7 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { useState } from "react";
+import { useLogout, useUser, useAddress, useMetamask, useDisconnect } from "@thirdweb-dev/react";
 
 export default function Dashboard() {
   const [open, setOpen] = useState(false);
@@ -13,9 +15,22 @@ export default function Dashboard() {
     {title: "baseball", src: "control"},
   ]
 
+  const router = useRouter();
+  const logout = useLogout();
+  const { user } = useUser();
+  const address = useAddress();
+  const connect = useMetamask();
+
+  const handleClick = (e) => {
+    e.preventDefault()
+    router.push(`/`)
+  }
+
+  const disconnect = useDisconnect();
+
   return (
     <div className="flex bg-white justify-between flex-col">
-      <div className={`${open ? "w-72" : "w-20"} duration-300 h-screen bg-black relative p-5 pt-8`}>
+      <div className={`${open ? "w-72" : "w-20"} duration-300 h-screen bg-black relative p-4 pt-8`}>
         <img
           src="../images/control.png"
           alt=""
@@ -27,17 +42,41 @@ export default function Dashboard() {
           <h1 className={`text-white origin-left ml-2 font-medium text-xl duration-300 ${!open && 'scale-0'}`}>MirrorPay</h1>
         </div>
         <ul className={`text-white pt-6`}>
-         {Menus.map((menu, index) => (
-          <li key={index} className={`${menu.gap? "mt-9" : "mt-2"}  text-sm flex items-center gap-x-4 cursor-pointer p-2 rounded-md hover:bg-slate-400`}>
+         {Menus.map((menu, index, href) => (
+          <li key={index} className={`${menu.gap? "mt-9" : "mt-2"} text-sm flex items-center gap-x-4 cursor-pointer p-2 rounded-md hover:bg-slate-400`}>
             <img src={`../images/${menu.src}.png`}/>
-            <span className={`${!open && "hidden"} origin-left duration-300`}><Link href={`./${menu.title}`}>{menu.title}</Link></span>
+            <span className={`${!open && "hidden"} origin-left duration-300`}><a onClick={() => router.push(`./${menu.title}`)}>{menu.title}</a></span>
           </li>
          ))}
         </ul>
       </div>
+      {address?
+      <>
+      <button onClick={logout}>Logout</button>
+      <button onClick={disconnect}>Disconnect</button>
+      <a onClick={handleClick}>exit</a>
+      <p>{address}</p>
+      </>
+       : <>
+      <button onClick={connect}>Connect</button>
+      </>
+}
     </div>
   );
 }
 
-
 //${index === 0 && "bg-slate-400"}
+//{`./${menu.title}`}
+
+/*
+{address?
+      <>
+      <button onClick={logout}>Logout</button>
+      <button onClick={disconnect}>Disconnect</button>
+      <a onClick={handleClick}>exit</a>
+      <p>{address}</p>
+      </>
+       : <>
+      <button onClick={connect}>Connect</button>
+      </>
+*/

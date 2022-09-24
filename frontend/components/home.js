@@ -3,6 +3,7 @@ import { useRef } from "react";
 import {
   useScroll,
 } from "framer-motion";
+import { useRouter } from "next/router";
 
 /*
 function ParallaxText({ children, baseVelocity = 100 }) {
@@ -71,6 +72,8 @@ export default function Homepage() {
     container: carouselRef,
   });
 
+  const router = useRouter();
+
   return (
     <div className="relative">
       <div className="flex flex-wrap w-full">
@@ -97,10 +100,10 @@ export default function Homepage() {
             </p>
           </motion.div>
           <br />
-          <div className="flex items-start justify-start py-6 mx-28 mt-4">
+          <div className="flex items-start justify-start py-6 ml-28 mt-4">
             <div className="relative group">
               <div className="absolute -inset-0.5 bg-gradient-to-r from-pink-600 to-purple-600 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
-              <button className="relative px-7 py-4 bg-black rounded-lg leading-none flex items-center divide-x divide-gray-600">
+              <button className="relative px-7 py-4 bg-black rounded-lg leading-none flex items-center divide-x divide-gray-600" onClick={() => router.push("../wallet")}>
                 <span className="pl-3 text-indigo-400 group-hover:text-gray-100 transition duration-200">
                   Get Started &rarr;
                 </span>
@@ -110,7 +113,7 @@ export default function Homepage() {
         </div>
         <div className="mt-60 flex flex-wrap float-right">
           {/* here goes the payroll animation */}
-
+          <img src="../images/cool.png" alt="" className="object-contain w-full h-80"/>
           
           {/* payroll animation ends */}
         </div>
@@ -231,7 +234,7 @@ export default function Homepage() {
           </div>
           <br />
           <p className="text-white text-xl tracking-wide pt-4 m-auto">
-            Reduce admin tasks by your in-house team. Work with Remote to manage
+            Reduce admin tasks by your in-house team. Work with MirrorPay to manage
             payroll across multiple countries where you have local entities,
             without in-house administration.
           </p>
