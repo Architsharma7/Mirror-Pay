@@ -10,13 +10,10 @@
   },
   "dependencies": {
     "@rainbow-me/rainbowkit": "^0.5.1",
-<<<<<<< HEAD
     "@thirdweb-dev/auth": "^2.0.4",
     "@thirdweb-dev/react": "^3.0.4",
     "@thirdweb-dev/sdk": "^3.0.4",
-=======
     "@superfluid-finance/sdk-core": "^0.5.6",
->>>>>>> de30fbd78529d9f5e527c4c2daf2e96a6016b5b3
     "alchemy-sdk": "^2.0.4",
     "ethers": "^5.7.1",
     "framer-motion": "^7.3.3",
