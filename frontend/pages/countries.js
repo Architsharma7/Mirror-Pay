@@ -6,6 +6,7 @@ export default function Countries() {
   const [value, setValue] = useState("");
   const options = useMemo(() => countryList().getData(), []);
 
+
   const changeHandler = (value) => {
    
     setValue(value);
@@ -19,10 +20,11 @@ export default function Countries() {
       <Select
         options={options}
         value={value}
-        onChange={changeHandler}
+        onChange={changeHandler} 
         isMulti
         closeMenuOnSelect={false}
         isSearchable={true}
+        required = {true}
       />
     </div>
   );

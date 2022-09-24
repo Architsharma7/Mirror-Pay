@@ -6,18 +6,23 @@ import styles from "../styles/onboarding.module.css";
 
 export default function Onboarding() {
   const [page, setPage] = useState(0);
+  const [formData, setFormData] = useState({
+    companyname: "",
+    companyemail: "",
+  });
 
   const FormTitles = ["Company's Info", "Countries", "Wallet"];
 
   const PageDisplay = () => {
     if (page == 0) {
-      return <CompanyInfo />;
+      return <CompanyInfo formData={formData} setFormData={setFormData}/>;
     } else if (page == 1) {
       return <Countries />;
     } else {
       return <Wallet />;
     }
   };
+
 
   return (
     <div className="w-screen h-screen flex mx-auto my-auto">
@@ -45,10 +50,10 @@ export default function Onboarding() {
                 onClick={() => {
                   setPage((currPage) => currPage - 1);
                 }}
-                disabled={page == 0}
+                hidden={page == 0}
                 className="text-white bg-slate-700"
               >
-                Prev
+                Previous
               </button>
               <button
                 hidden={page == FormTitles.length - 1}
